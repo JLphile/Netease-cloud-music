@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="cn-ZH">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>网易云-header</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+
+    <style>
+      header {
+        height: 70px;
+        box-sizing: border-box;
+        background-color: #242424;
+        border-bottom: 1px solid #000;
+      }
+      .top-bar {
+        display: flex;
+        justify-content: space-between;
+        /* align-items 默认值是normal 会有自动的stretch拉伸效果 */
+        /* align-items: center; */
+        height: 69px;
+        line-height: 69px;
+
+        /* 暂时 */
+        /* background-color: pink; */
+      }
+      .top-bar .bar-left .logo {
+        width: 176px;
+        height: 69px;
+        background: url(./images/top-bar-logo.png) no-repeat 0 0;
+      }
+      .top-bar .bar-left .logo a {
+        display: inline-block;
+        width: 157px;
+        height: 100%;
+        padding-right: 20px;
+        text-indent: -9999px;
+      }
+      .top-bar .bar-left .logo a:hover {
+        text-decoration: underline;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top">
+      <header>
+        <div class="top-bar wrapper_01">
+          <div class="bar-left">
+            <h1 class="logo">
+              <a href="#">网易云音乐</a>
+            </h1>
+          </div>
+          <div class="bar-right">bar-right</div>
+        </div>
+      </header>
+      <nav></nav>
+    </div>
+
+    <script></script>
+  </body>
+</html>
