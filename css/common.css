@@ -2,7 +2,7 @@
   width: 1100px;
   margin: 0 auto;
 }
-.list .hot {
+.list .hot,.bar-right .list .search {
   display: inline-block;
   background: url(../images/top-bar-logo.png) no-repeat;
 }

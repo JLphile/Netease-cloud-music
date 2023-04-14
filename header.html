@@ -51,6 +51,7 @@
       .top-bar .bar-right .list {
         display: flex;
         justify-content: space-between;
+        align-items: center;
       }
       .top-bar .bar-left .list .item {
         position: relative;
@@ -62,13 +63,14 @@
         text-align: center;
         color: #ccc;
       }
+
       .top-bar .bar-left .list .item:hover,
       .top-bar .bar-left .list .item.active {
         background-color: #000;
         color: #fff;
       }
-      .top-bar.bar-left .list .item:hover::after,
-      .top-bar.bar-left .list .item.active::after {
+      .top-bar .bar-left .list .item:hover::after,
+      .top-bar .bar-left .list .item.active::after {
         content: '';
         position: absolute;
         left: 0;
@@ -79,6 +81,7 @@
         height: 7px;
         background: url(./images/top-bar-logo.png) no-repeat -226px 0;
       }
+
       .top-bar .bar-left .list > li:last-child {
         position: relative;
       }
@@ -88,24 +91,43 @@
         left: 100px;
       }
       .top-bar .bar-right .list a {
+        display: inline-block;
+        width: 90px;
+        height: 32px;
         margin-left: 12px;
         box-sizing: border-box;
         border: 1px solid #4f4f4f;
         border-radius: 20px;
-        padding: 10px 16px;
+        line-height: 33px;
+        text-align: center;
         color: #ccc;
       }
-      .top-bar .bar-right .list .item .author:hover {
+      .top-bar .bar-right .list .author:hover {
         color: #fff;
         border: 1px solid #ccc;
       }
-      .top-bar .bar-right .list .item .login {
+      .top-bar .bar-right .list .login {
         color: #787878;
       }
-      .top-bar .bar-right .list .item .login:hover {
+      .top-bar .bar-right .list .login:hover {
         border: 1px solid #ccc;
         text-decoration: underline;
         color: rgb(153, 153, 153);
+      }
+      .top-bar .bar-right .list .search {
+        width: 158px;
+        height: 32px;
+        line-height: 34px;
+        background-color: #fff;
+        border-radius: 32px;
+        background-position: 0 -99px;
+      }
+      .top-bar .bar-right .list .search input {
+        width: 118px;
+        margin-left: 28px;
+      }
+      .top-bar .bar-right .list .search input::placeholder {
+        color: #9b9b9b;
       }
     </style>
   </head>
@@ -141,8 +163,8 @@
           </div>
           <div class="bar-right">
             <ul class="list">
-              <li class="item">
-                <input type="text" />
+              <li class="item search">
+                <input type="text" placeholder="音乐/视频/电台/用户" />
               </li>
               <li class="item">
                 <a href="#" class="author">创作者中心</a>
