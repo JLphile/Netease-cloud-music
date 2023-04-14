@@ -13,7 +13,8 @@
         height: 70px;
         box-sizing: border-box;
         background-color: #242424;
-        border-bottom: 1px solid #000;
+        /* border-bottom: 1px solid #000; */
+        border-bottom: 1px solid #c20c0c;
       }
       .top-bar {
         display: flex;
@@ -57,7 +58,7 @@
         position: relative;
         display: block;
         padding: 0 19px;
-        height: 70px;
+        height: 69px;
         line-height: 70px;
         font-size: 14px;
         text-align: center;
@@ -80,6 +81,7 @@
         width: 12px;
         height: 7px;
         background: url(./images/top-bar-logo.png) no-repeat -226px 0;
+        overflow: hidden;
       }
 
       .top-bar .bar-left .list > li:last-child {
@@ -129,6 +131,39 @@
       .top-bar .bar-right .list .search input::placeholder {
         color: #9b9b9b;
       }
+      /* ---------------------top-nav---------------------------- */
+      .top nav {
+        height: 35px;
+        line-height: 35px;
+        box-sizing: border-box;
+        border-bottom: 1px solid #a40011;
+        background-color: #c20c0c;
+      }
+      .top nav .nav_wrap {
+        display: flex;
+        padding-left: 360px;
+      }
+      .top nav .nav_wrap .item {
+        line-height: 34px;
+        text-align: center;
+      }
+      .top nav .nav_wrap .item a {
+        display: inline-block;
+        margin: 0 17px;
+        padding: 0 13px;
+        line-height: 34px;
+        text-align: center;
+        color: #fff;
+      }
+      .top nav .nav_wrap .item:hover a,
+      .top nav .nav_wrap .item a.active {
+        height: 20px;
+        padding: 0 13px;
+        margin: 6px 17px 0;
+        border-radius: 20px;
+        background-color: #9b0909;
+        line-height: 21px;
+      }
     </style>
   </head>
   <body>
@@ -164,7 +199,7 @@
           <div class="bar-right">
             <ul class="list">
               <li class="item search">
-                <input type="text" placeholder="音乐/视频/电台/用户" />
+                <input type="text" class="music-search" placeholder="音乐/视频/电台/用户" />
               </li>
               <li class="item">
                 <a href="#" class="author">创作者中心</a>
@@ -176,9 +211,26 @@
           </div>
         </div>
       </header>
-      <nav></nav>
+      <nav class="">
+        <ul class="nav_wrap nav">
+          <li class="item"><a href="#" class="active">推荐</a></li>
+          <li class="item"><a href="#">排行榜</a></li>
+          <li class="item"><a href="#">歌单</a></li>
+          <li class="item"><a href="#">主播电台</a></li>
+          <li class="item"><a href="#">歌手</a></li>
+          <li class="item"><a href="#">新碟上架</a></li>
+        </ul>
+      </nav>
     </div>
 
-    <script></script>
+    <script>
+      const musicInputEl = document.querySelector('.music-search')
+      musicInputEl.onfocus = function (even) {
+        this.removeAttribute('placeholder')
+      }
+      musicInputEl.onblur = function (event) {
+        this.placeholder = '音乐/视频/电台/用户'
+      }
+    </script>
   </body>
 </html>
