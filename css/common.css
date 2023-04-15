@@ -7,6 +7,10 @@
   height: 34px;
   margin: 0 auto;
 }
+.swipe_w982{
+  width: 982px;
+  margin: 0 auto;
+}
 .list .hot,.bar-right .list .search {
   display: inline-block;
   background: url(../images/top-bar-logo.png) no-repeat;

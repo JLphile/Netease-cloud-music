@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="cn-ZH">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+
+    <style>
+      .top {
+        height: 105px;
+        background-color: #ccc;
+      }
+      .swipe {
+        height: 285px;
+        background-image: url(./images/swiper-bgc-8.jpg);
+        background-size: 6000px;
+        background-position: center center;
+      }
+      .area {
+        position: relative;
+        height: 285px;
+      }
+      /* ------area-left-image---- */
+      .swipe .area-left {
+        position: relative;
+        width: 730px;
+      }
+      .swipe .area-left .img-list {
+        display: flex;
+        overflow: hidden;
+      }
+      .swipe .area-left .img-list li {
+        flex-shrink: 0;
+        width: 100%;
+      }
+      .swipe .area-left .img-list .item {
+        display: block;
+      }
+      .swipe .area-left .img-list .item img {
+        display: block;
+        width: 100%;
+        height: 285px;
+      }
+      /* -------banner-dots--------- */
+      .swipe .area-left .dots {
+        position: absolute;
+        top: 259px;
+        left: 0;
+        width: 730px;
+        height: 20px;
+        text-align: center;
+      }
+      .swipe .area-left .dots .dot {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: url(./images/banner.png) no-repeat 3px -343px;
+      }
+      .swipe .area-left .dots .dot.active,
+      .swipe .area-left .dots .dot:hover {
+        background-position: -16px -343px;
+      }
+      /* -----area-right-download--------- */
+      .swipe .area-right {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: -1px;
+        width: 254px;
+        height: 285px;
+        background: url(./images/area-right-download.png) no-repeat 0 0;
+      }
+      .swipe .area-right .download {
+        color: red;
+        display: block;
+        width: 215px;
+        height: 56px;
+        margin: 186px 0 0 19px;
+        text-indent: -9999px;
+      }
+      .swipe .area-right .download:hover {
+        background: url(./images/area-right-download.png) no-repeat 0 -290px;
+      }
+
+      .swipe .area-right p {
+        margin: 10px auto;
+        text-align: center;
+        color: #8d8d8d;
+      }
+      .swipe .area-right .shadow-left,
+      .swipe .area-right .shadow-right {
+        display: block;
+        position: absolute;
+        top: 0;
+        width: 20px;
+        height: 285px;
+        background: url(./images/banner.png) no-repeat;
+      }
+      .swipe .area-right .shadow-left {
+        left: -20px;
+        background-position: -1px 0;
+      }
+
+      .swipe .area-right .shadow-right {
+        right: -20px;
+        background-position: -20px 0;
+      }
+
+      /* --------control-tab--------- */
+      .swipe .area .control-left,
+      .swipe .area .control-right {
+        position: absolute;
+        display: block;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        width: 37px;
+        height: 63px;
+        background: url(./images/banner.png) no-repeat;
+      }
+      .swipe .area .control-left {
+        left: -68px;
+        background-position: 0 -360px;
+      }
+      .swipe .area .control-left:hover {
+        background-position: 0 -430px;
+      }
+      .swipe .area .control-right {
+        right: -68px;
+        background-position: 0 -508px;
+      }
+      .swipe .area .control-right:hover {
+        background-position: 0 -578px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top"></div>
+    <!-- ---------------swipe 轮播图---------------------- -->
+    <div class="swipe">
+      <div class="area swipe_w982">
+        <div class="area-left">
+          <ul class="img-list">
+            <li>
+              <a href="#" class="item">
+                <img src="./images/swiper-1.jpg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="#" class="item">
+                <img src="./images/swiper-2.jpg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="#" class="item">
+                <img src="./images/swiper-3.jpg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="#" class="item">
+                <img src="./images/swiper-4.jpg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="#" class="item">
+                <img src="./images/swiper-5.jpg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="#" class="item">
+                <img src="./images/swiper-6.jpg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="#" class="item">
+                <img src="./images/swiper-7.jpg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="#" class="item">
+                <img src="./images/swiper-8.jpg" alt="" />
+              </a>
+            </li>
+          </ul>
+          <div class="dots">
+            <a href="#" class="dot active"></a>
+            <a href="#" class="dot"></a>
+            <a href="#" class="dot"></a>
+            <a href="#" class="dot"></a>
+            <a href="#" class="dot"></a>
+            <a href="#" class="dot"></a>
+            <a href="#" class="dot"></a>
+            <a href="#" class="dot"></a>
+          </div>
+        </div>
+
+        <div class="area-right">
+          <a href="#" class="download">下载客户端</a>
+          <p>PC 安卓 iPhone WP iPad Mac 六大客户端</p>
+          <span class="shadow-left"></span>
+          <span class="shadow-right"></span>
+        </div>
+
+        <a href="#" class="control-left"></a>
+        <a href="#" class="control-right"></a>
+      </div>
+    </div>
+
+    <script></script>
+  </body>
+</html>
