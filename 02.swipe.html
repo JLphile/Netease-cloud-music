@@ -27,10 +27,10 @@
       .swipe .area-left {
         position: relative;
         width: 730px;
+        overflow: hidden;
       }
       .swipe .area-left .img-list {
         display: flex;
-        overflow: hidden;
       }
       .swipe .area-left .img-list li {
         flex-shrink: 0;
@@ -185,6 +185,7 @@
               </a>
             </li>
           </ul>
+
           <div class="dots">
             <a href="#" class="dot active"></a>
             <a href="#" class="dot"></a>
@@ -209,6 +210,35 @@
       </div>
     </div>
 
-    <script></script>
+    <script>
+      const dotEls = document.querySelectorAll('.dot')
+      // console.log(typeof dotEls, dotEls)
+      // for (let i = 0; i < dotEls.length; i++) {
+      //   dotEls[i].setAttribute('data-index',i)
+      // }
+      dotEls.forEach((item, index) => item.setAttribute('data-index', index))
+
+      const ulImgListEl = document.querySelector('.img-list')
+      const dotsEl = document.querySelector('.dots')
+      let activeEl = dotsEl.querySelector('.active')
+      for (let i = 0; i < dotEls.length; i++) {
+        dotEls[i].onclick = function (e) {
+          let index = e.target.dataset.index
+          activeEl && activeEl.classList.remove('active')
+          ulImgListEl.style.transform = `translateX(${-730 * index}px)`
+          this.classList.add('active')
+          activeEl = this
+        }
+      }
+      for (let i = 0; i < dotEls.length; i++) {
+        dotEls[i].onmouseenter = function (e) {
+          let index = e.target.dataset.index
+          activeEl && activeEl.classList.remove('active')
+          // ulImgListEl.style.transform = `translateX(${-730 * index}px)`
+          this.classList.add('active')
+          activeEl = this
+        }
+      }
+    </script>
   </body>
 </html>
