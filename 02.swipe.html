@@ -225,9 +225,9 @@
         dotEls[i].onclick = function (e) {
           let index = e.target.dataset.index
           activeEl && activeEl.classList.remove('active')
-          ulImgListEl.style.transform = `translateX(${-730 * index}px)`
           this.classList.add('active')
           activeEl = this
+          ulImgListEl.style.transform = `translateX(${-730 * index}px)`
         }
       }
       for (let i = 0; i < dotEls.length; i++) {
