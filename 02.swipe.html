@@ -205,12 +205,13 @@
           <span class="shadow-right"></span>
         </div>
 
-        <a href="#" class="control-left"></a>
-        <a href="#" class="control-right"></a>
+        <a href="javascript:void(0)" class="control-left"></a>
+        <a href="javascript:void(0)" class="control-right"></a>
       </div>
     </div>
 
     <script>
+      // 添加自定义属性 data-index
       const dotEls = document.querySelectorAll('.dot')
       // console.log(typeof dotEls, dotEls)
       // for (let i = 0; i < dotEls.length; i++) {
@@ -221,23 +222,108 @@
       const ulImgListEl = document.querySelector('.img-list')
       const dotsEl = document.querySelector('.dots')
       let activeEl = dotsEl.querySelector('.active')
+      // 监听中间小圆圈鼠标点击事件
       for (let i = 0; i < dotEls.length; i++) {
         dotEls[i].onclick = function (e) {
-          let index = e.target.dataset.index
           activeEl && activeEl.classList.remove('active')
-          this.classList.add('active')
-          activeEl = this
+          e.target.classList.add('active')
+          activeEl = e.target
+
+          let index = e.target.dataset.index
           ulImgListEl.style.transform = `translateX(${-730 * index}px)`
         }
       }
-      for (let i = 0; i < dotEls.length; i++) {
-        dotEls[i].onmouseenter = function (e) {
+
+      // 监听中间小圆圈(两种方案)-鼠标进入
+      // for (let i = 0; i < dotEls.length; i++) {
+      //   dotEls[i].onmouseenter = function (e) {
+      //     let index = e.target.dataset.index
+      //     activeEl && activeEl.classList.remove('active')
+      //     e.target.classList.add('active')
+      //     activeEl = e.target
+      //   }
+      // }
+      dotsEl.onmouseover = function (e) {
+        if (e.target.tagName !== 'DIV') {
           let index = e.target.dataset.index
           activeEl && activeEl.classList.remove('active')
-          // ulImgListEl.style.transform = `translateX(${-730 * index}px)`
-          this.classList.add('active')
-          activeEl = this
+          e.target.classList.add('active')
+          activeEl = e.target
+          ulImgListEl.style.transform = `translateX(${-730 * index}px)`
         }
+      }
+
+      // ----------监听左侧箭头----------
+      const controlLeftEl = document.querySelector('.control-left')
+      controlLeftEl.onclick = function (e) {
+        let index = Array.from(dotEls).findIndex(item => item.classList.contains('active'))
+        // console.log(index)
+        index--
+        // console.log(index)
+        if (index !== -1) {
+          activeEl && activeEl.classList.remove('active')
+          dotEls[index].classList.add('active')
+          activeEl = dotEls[index]
+          ulImgListEl.style.transform = `translateX(${-730 * index}px)`
+        } else {
+          index = Array.from(dotEls).length - 1
+          // console.log(index)
+          activeEl && activeEl.classList.remove('active')
+          dotEls[index].classList.add('active')
+          activeEl = dotEls[index]
+          ulImgListEl.style.transform = `translateX(${-730 * index}px)`
+        }
+      }
+      // ----------监听右侧箭头----------
+      const controlRightEl = document.querySelector('.control-right')
+      controlRightEl.onclick = function (e) {
+        let index = Array.from(dotEls).findIndex(item => item.classList.contains('active'))
+        // console.log(index)
+        index++
+        // console.log(index)
+        // console.log(Array.from(dotEls).length)
+        if (index !== Array.from(dotEls).length) {
+          activeEl && activeEl.classList.remove('active')
+          dotEls[index].classList.add('active')
+          activeEl = dotEls[index]
+          ulImgListEl.style.transform = `translateX(${-730 * index}px)`
+        } else {
+          index = 0
+          activeEl && activeEl.classList.remove('active')
+          dotEls[index].classList.add('active')
+          activeEl = dotEls[index]
+          ulImgListEl.style.transform = `translateX(${-730 * index}px)`
+        }
+      }
+      // 定时器部分
+      let timerId = null
+      startTimer()
+      const swipeEl = document.querySelector('.swipe')
+
+      swipeEl.onmouseover = function (e) {
+        clearInterval(timerId)
+      }
+      swipeEl.onmouseout = function (e) {
+        startTimer()
+      }
+      // 封装启动定时器函数
+      function startTimer() {
+        timerId = setInterval(() => {
+          let index = Array.from(dotEls).findIndex(item => item.classList.contains('active'))
+          index++
+          if (index !== 8) {
+            activeEl && activeEl.classList.remove('active')
+            dotEls[index].classList.add('active')
+            activeEl = dotEls[index]
+            ulImgListEl.style.transform = `translateX(${-730 * index}px)`
+          } else {
+            index = 0
+            activeEl && activeEl.classList.remove('active')
+            dotEls[index].classList.add('active')
+            activeEl = dotEls[index]
+            ulImgListEl.style.transform = `translateX(${-730 * index}px)`
+          }
+        }, 2000)
       }
     </script>
   </body>
