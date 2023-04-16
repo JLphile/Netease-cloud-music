@@ -15,7 +15,7 @@
       }
       .swipe {
         height: 285px;
-        background-image: url(./images/swiper-bgc-8.jpg);
+        background-image: url(./images/swiper-bgc-1.jpg);
         background-size: 6000px;
         background-position: center center;
       }
@@ -146,6 +146,11 @@
           <ul class="img-list">
             <li>
               <a href="#" class="item">
+                <img src="./images/swiper-0.jpg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="#" class="item">
                 <img src="./images/swiper-1.jpg" alt="" />
               </a>
             </li>
@@ -179,11 +184,6 @@
                 <img src="./images/swiper-7.jpg" alt="" />
               </a>
             </li>
-            <li>
-              <a href="#" class="item">
-                <img src="./images/swiper-8.jpg" alt="" />
-              </a>
-            </li>
           </ul>
 
           <div class="dots">
@@ -211,6 +211,7 @@
     </div>
 
     <script>
+      const swipeEl = document.querySelector('.swipe')
       // 添加自定义属性 data-index
       const dotEls = document.querySelectorAll('.dot')
       // console.log(typeof dotEls, dotEls)
@@ -230,6 +231,7 @@
           activeEl = e.target
 
           let index = e.target.dataset.index
+          swipeEl.style.backgroundImage = `url(./images/swiper-bgc-${index}.jpg)`
           ulImgListEl.style.transform = `translateX(${-730 * index}px)`
         }
       }
@@ -249,6 +251,7 @@
           activeEl && activeEl.classList.remove('active')
           e.target.classList.add('active')
           activeEl = e.target
+          swipeEl.style.backgroundImage = `url(./images/swiper-bgc-${index}.jpg)`
           ulImgListEl.style.transform = `translateX(${-730 * index}px)`
         }
       }
@@ -264,6 +267,7 @@
           activeEl && activeEl.classList.remove('active')
           dotEls[index].classList.add('active')
           activeEl = dotEls[index]
+          swipeEl.style.backgroundImage = `url(./images/swiper-bgc-${index}.jpg)`
           ulImgListEl.style.transform = `translateX(${-730 * index}px)`
         } else {
           index = Array.from(dotEls).length - 1
@@ -271,6 +275,7 @@
           activeEl && activeEl.classList.remove('active')
           dotEls[index].classList.add('active')
           activeEl = dotEls[index]
+          swipeEl.style.backgroundImage = `url(./images/swiper-bgc-${index}.jpg)`
           ulImgListEl.style.transform = `translateX(${-730 * index}px)`
         }
       }
@@ -286,19 +291,21 @@
           activeEl && activeEl.classList.remove('active')
           dotEls[index].classList.add('active')
           activeEl = dotEls[index]
+          swipeEl.style.backgroundImage = `url(./images/swiper-bgc-${index}.jpg)`
           ulImgListEl.style.transform = `translateX(${-730 * index}px)`
         } else {
           index = 0
           activeEl && activeEl.classList.remove('active')
           dotEls[index].classList.add('active')
           activeEl = dotEls[index]
+          swipeEl.style.backgroundImage = `url(./images/swiper-bgc-${index}.jpg)`
           ulImgListEl.style.transform = `translateX(${-730 * index}px)`
         }
       }
       // 定时器部分
       let timerId = null
       startTimer()
-      const swipeEl = document.querySelector('.swipe')
+      // const swipeEl = document.querySelector('.swipe')
 
       swipeEl.onmouseover = function (e) {
         clearInterval(timerId)
@@ -315,12 +322,14 @@
             activeEl && activeEl.classList.remove('active')
             dotEls[index].classList.add('active')
             activeEl = dotEls[index]
+            swipeEl.style.backgroundImage = `url(./images/swiper-bgc-${index}.jpg)`
             ulImgListEl.style.transform = `translateX(${-730 * index}px)`
           } else {
             index = 0
             activeEl && activeEl.classList.remove('active')
             dotEls[index].classList.add('active')
             activeEl = dotEls[index]
+            swipeEl.style.backgroundImage = `url(./images/swiper-bgc-${index}.jpg)`
             ulImgListEl.style.transform = `translateX(${-730 * index}px)`
           }
         }, 2000)
