@@ -2,20 +2,21 @@
   width: 1100px;
   margin: 0 auto;
 }
-.nav_wrap{
+.nav_wrap {
   width: 1100px;
   height: 34px;
   margin: 0 auto;
 }
-.swipe_w982{
+.swipe_w982 {
   width: 982px;
   margin: 0 auto;
 }
-._w980{
+._w980 {
   width: 980px;
   margin: 0 auto;
 }
-.list .hot,.bar-right .list .search {
+.list .hot,
+.bar-right .list .search {
   display: inline-block;
   background: url(../images/top-bar-logo.png) no-repeat;
 }
@@ -23,4 +24,11 @@
   width: 28px;
   height: 19px;
   background-position: -190px 0;
+}
+
+._text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
 }
