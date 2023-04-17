@@ -11,6 +11,10 @@
   width: 982px;
   margin: 0 auto;
 }
+._w980{
+  width: 980px;
+  margin: 0 auto;
+}
 .list .hot,.bar-right .list .search {
   display: inline-block;
   background: url(../images/top-bar-logo.png) no-repeat;
