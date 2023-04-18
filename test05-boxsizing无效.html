@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="cn-ZH">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .container {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        background-color: #0f0;
+      }
+      /* box 不设置width时，默认时auto属性。效果类似box-size */
+      .box1 {
+        height: 200px;
+        background-color: orange;
+        border-right: 30px solid red;
+        padding-right: 20px;
+      }
+
+      /* 定位 */
+      .box2{
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: orange;
+
+        border: 20px solid green;
+        padding: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- <div class="box1">box 不设置width时，默认时auto属性。效果类似box-size。右边距20px，右边框30px</div> -->
+      <div class="box2">内容区域被压缩成200*200</div>
+    </div>
+
+    <script></script>
+  </body>
+</html>
