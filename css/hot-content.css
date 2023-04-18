@@ -1,0 +1,57 @@
+.recommend .album-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 690px;
+  margin-top: 20px;
+}
+.recommend .item {
+  width: 140px;
+}
+.recommend .item .top {
+  position: relative;
+  width: 140px;
+  height: 140px;
+}
+.recommend .item .top .album {
+  width: 100%;
+  height: 100%;
+}
+.recommend .item .top .cover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: url(../images/coverall.png) no-repeat 0 0;
+}
+.recommend .item .top .info {
+  position: absolute;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  bottom: 0;
+  width: 100%;
+  height: 27px;
+  color: #ccc;
+  background: url(../images/coverall.png) no-repeat 0 -537px;
+}
+.recommend .item .bottom {
+  margin: 8px 0 49px;
+  width: 100%;
+  font-size: 14px;
+}
+.recommend .item .bottom .desc {
+  display: inline-block;
+  max-width: 100%;
+  vertical-align: middle;
+  color: #000;
+}
+.recommend .item .bottom .desc:hover {
+  text-decoration: underline;
+}
+.recommend .item .bottom .desc .radio {
+  position: relative;
+  top: 2px;
+  margin-right: 3px;
+}
