@@ -32,15 +32,41 @@
 
         border: 20px solid green;
         padding: 30px;
+        /* 无效属性 box-sizing */
+        box-sizing: border-box;
+      }
+
+      .big {
+        display: flex;
+        margin-top: 20px;
+        width: 300px;
+        height: 300px;
+        background-color: #0f0;
+      }
+      .small{
+        width: 100px;
+        background-color: #f00;
+
+        border-top: 30px solid orange;
+      }
+      .big .small2{
+        flex: 1;
+        border: 10px solid pink;
       }
     </style>
   </head>
   <body>
     <div class="container">
       <!-- <div class="box1">box 不设置width时，默认时auto属性。效果类似box-size。右边距20px，右边框30px</div> -->
-      <div class="box2">内容区域被压缩成200*200</div>
+      <div class="box2">内容区域被压缩成200*200,无效属性box-sizing，width值是auto属性，会自动压缩内容，跟border-box一个效果</div>
     </div>
 
+    <div class="big">
+      <div class="small"></div>
+      <div class="small2">
+        flex:1 等价flex-grow:1,align-item缺省，意味着高度会自动拉伸；这样等价于宽和高都是auto，自动处理 ，所以会自动压缩内容，等价于border-box效果
+      </div>
+    </div>
     <script></script>
   </body>
 </html>
