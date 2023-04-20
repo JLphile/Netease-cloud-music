@@ -31,11 +31,12 @@ a {
   outline: none;
 }
 ul,
+ol,
 li {
   list-style: none;
 }
 
-input{
+input {
   border: none;
   outline: none;
 }
@@ -43,6 +44,6 @@ input{
   vertical-align: top;
 } */
 
-i{
+i {
   font-style: normal;
 }

@@ -59,7 +59,7 @@
         font-size: 14px;
         color: #333;
       }
-      .rank-content .rank .top .info .title:hover{
+      .rank-content .rank .top .info .title:hover {
         text-decoration: underline;
       }
       .rank-content .rank .top .info .btn {
@@ -81,6 +81,79 @@
       .rank-content .rank .top .info .favor {
         margin-left: 10px;
         background-position: -300px -205px;
+      }
+      .rank-content .rank .list {
+        padding-left: 15px;
+      }
+      .rank-content .rank .list .item {
+        display: flex;
+        justify-content: space-between;
+        height: 32px;
+        line-height: 32px;
+        overflow: hidden;
+      }
+      .rank-content .rank .list .item .no {
+        width: 35px;
+        text-align: center;
+        font-size: 16px;
+        color: #666;
+      }
+      .rank-content .rank .list .item:nth-child(-n + 3) .no {
+        color: #c10d0c;
+      }
+      .rank-content .rank .list .item .song {
+        flex: 1;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+      .rank-content .rank .list .item .song:hover {
+        text-decoration: underline;
+      }
+      .rank-content .rank .list .item .oper {
+        display: none;
+        align-items: center;
+        width: 82px;
+      }
+      .rank-content .rank .list .item:hover .oper {
+        display: flex;
+      }
+      .rank-content .rank .list .item .oper .btn {
+        width: 17px;
+        height: 17px;
+        background: url(./images/user-login-bgc.png) no-repeat;
+      }
+      .rank-content .rank .list .item .oper .play {
+        background-position: -267px -268px;
+      }
+      .rank-content .rank .list .item .oper .play:hover {
+        background-position: -267px -288px;
+      }
+      .rank-content .rank .list .item .oper .add {
+        margin: 2px 6px 0 10px;
+        background: url(./images/icon.png) no-repeat;
+        background-position: 0 -700px;
+      }
+      .rank-content .rank .list .item .oper .add:hover {
+        background-position: -22px -700px;
+      }
+      .rank-content .rank .list .item .oper .favor {
+        background-position: -297px -268px;
+      }
+      .rank-content .rank .list .item .oper .favor:hover {
+        background-position: -297px -288px;
+      }
+      .rank-content .rank .list .more{
+        margin-right: 32px;
+        height: 32px;
+        line-height: 32px;
+        text-align: right;
+      }
+      .rank-content .rank .list .more .all{
+        color: #000;
+      }
+      .rank-content .rank .list .more .all:hover{
+        text-decoration: underline;
       }
     </style>
   </head>
@@ -105,10 +178,328 @@
                   </div>
                 </div>
               </dt>
-              <dd></dd>
+              <dd class="list up-list">
+                <ol>
+                  <li class="item">
+                    <span class="no">1</span>
+                    <a href="#" class="song">Ski</a>
+                    <div class="oper">
+                      <a class="btn play" href="#" title="播放"></a>
+                      <a class="btn add" href="#" title="添加到播放列表"></a>
+                      <a class="btn favor" href="#" title="收藏"></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">2</span>
+                    <a href="#" class="song">Slow</a>
+                    <div class="oper">
+                      <a class="btn play" href="#" title="播放"></a>
+                      <a class="btn add" href="#" title="添加到播放列表"></a>
+                      <a class="btn favor" href="#" title="收藏"></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">3</span>
+                    <a href="#" class="song">身骑白马</a>
+                    <div class="oper">
+                      <a class="btn play" href="#" title="播放"></a>
+                      <a class="btn add" href="#" title="添加到播放列表"></a>
+                      <a class="btn favor" href="#" title="收藏"></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">4</span>
+                    <a href="#" class="song">I'll Do It</a>
+                    <div class="oper">
+                      <a class="btn play" href="#" title="播放"></a>
+                      <a class="btn add" href="#" title="添加到播放列表"></a>
+                      <a class="btn favor" href="#" title="收藏"></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">5</span>
+                    <a href="#" class="song">雨过天不晴</a>
+                    <div class="oper">
+                      <a class="btn play" href="#" title="播放"></a>
+                      <a class="btn add" href="#" title="添加到播放列表"></a>
+                      <a class="btn favor" href="#" title="收藏"></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">6</span>
+                    <a href="#" class="song">孤雏</a>
+                    <div class="oper">
+                      <a class="btn play" href="#" title="播放"></a>
+                      <a class="btn add" href="#" title="添加到播放列表"></a>
+                      <a class="btn favor" href="#" title="收藏"></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">7</span>
+                    <a href="#" class="song">Kurup Bakamsan</a>
+                    <div class="oper">
+                      <a class="btn play" href="#" title="播放"></a>
+                      <a class="btn add" href="#" title="添加到播放列表"></a>
+                      <a class="btn favor" href="#" title="收藏"></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">8</span>
+                    <a href="#" class="song">Suygu</a>
+                    <div class="oper">
+                      <a class="btn play" href="#" title="播放"></a>
+                      <a class="btn add" href="#" title="添加到播放列表"></a>
+                      <a class="btn favor" href="#" title="收藏"></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">9</span>
+                    <a href="#" class="song">春读</a>
+                    <div class="oper">
+                      <a class="btn play" href="#" title="播放"></a>
+                      <a class="btn add" href="#" title="添加到播放列表"></a>
+                      <a class="btn favor" href="#" title="收藏"></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">10</span>
+                    <a href="#" class="song">几人</a>
+                    <div class="oper">
+                      <a class="btn play" href="#" title="播放"></a>
+                      <a class="btn add" href="#" title="添加到播放列表"></a>
+                      <a class="btn favor" href="#" title="收藏"></a>
+                    </div>
+                  </li>
+                </ol>
+                <div class="more">
+                  <a href="#" class="all">查看全部 &gt;</a>
+                </div>
+              </dd>
             </dl>
-            <dl class="rank new-rank"></dl>
-            <dl class="rank origin-rank"></dl>
+            <dl class="rank new-rank">
+              <dt class="top">
+                <div class="album">
+                  <img src="./images/new-song-img.jpg" alt="新歌榜" />
+                  <a href="#" class="cover"></a>
+                </div>
+                <div class="info">
+                  <a href="#" class="title">新歌榜</a>
+                  <div class="operation">
+                    <a href="#" class="btn play"></a>
+                    <a href="#" class="btn favor"></a>
+                  </div>
+                </div>
+              </dt>
+              <dd class="list up-list">
+                <ol>
+                  <li class="item">
+                    <span class="no">1</span>
+                    <a href="#" class="song">Ski</a>
+                    <div class="oper">
+                      <a class="btn play" href="#" title="播放"></a>
+                      <a class="btn add" href="#" title="添加到播放列表"></a>
+                      <a class="btn favor" href="#" title="收藏"></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">2</span>
+                    <a href="#" class="song">Slow</a>
+                    <div class="oper">
+                      <a class="btn play" href="#" title="播放"></a>
+                      <a class="btn add" href="#" title="添加到播放列表"></a>
+                      <a class="btn favor" href="#" title="收藏"></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">3</span>
+                    <a href="#" class="song">身骑白马</a>
+                    <div class="oper">
+                      <a class="btn play" href="#" title="播放"></a>
+                      <a class="btn add" href="#" title="添加到播放列表"></a>
+                      <a class="btn favor" href="#" title="收藏"></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">4</span>
+                    <a href="#" class="song">I'll Do It</a>
+                    <div class="oper">
+                      <a class="btn play" href="#" title="播放"></a>
+                      <a class="btn add" href="#" title="添加到播放列表"></a>
+                      <a class="btn favor" href="#" title="收藏"></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">5</span>
+                    <a href="#" class="song">雨过天不晴</a>
+                    <div class="oper">
+                      <a class="btn play" href="#" title="播放"></a>
+                      <a class="btn add" href="#" title="添加到播放列表"></a>
+                      <a class="btn favor" href="#" title="收藏"></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">6</span>
+                    <a href="#" class="song">孤雏</a>
+                    <div class="oper">
+                      <a class="btn play" href="#" title="播放"></a>
+                      <a class="btn add" href="#" title="添加到播放列表"></a>
+                      <a class="btn favor" href="#" title="收藏"></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">7</span>
+                    <a href="#" class="song">Kurup Bakamsan</a>
+                    <div class="oper">
+                      <a class="btn play" href="#" title="播放"></a>
+                      <a class="btn add" href="#" title="添加到播放列表"></a>
+                      <a class="btn favor" href="#" title="收藏"></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">8</span>
+                    <a href="#" class="song">Suygu</a>
+                    <div class="oper">
+                      <a class="btn play" href="#" title="播放"></a>
+                      <a class="btn add" href="#" title="添加到播放列表"></a>
+                      <a class="btn favor" href="#" title="收藏"></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">9</span>
+                    <a href="#" class="song">春读</a>
+                    <div class="oper">
+                      <a class="btn play" href="#" title="播放"></a>
+                      <a class="btn add" href="#" title="添加到播放列表"></a>
+                      <a class="btn favor" href="#" title="收藏"></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">10</span>
+                    <a href="#" class="song">几人</a>
+                    <div class="oper">
+                      <a class="btn play" href="#" title="播放"></a>
+                      <a class="btn add" href="#" title="添加到播放列表"></a>
+                      <a class="btn favor" href="#" title="收藏"></a>
+                    </div>
+                  </li>
+                </ol>
+                <div class="more">
+                  <a href="#" class="all">查看全部 &gt;</a>
+                </div>
+              </dd>
+            </dl>
+            <dl class="rank origin-rank">
+              <dt class="top">
+                <div class="album">
+                  <img src="./images/origin-img.jpg" alt="原创榜" />
+                  <a href="#" class="cover"></a>
+                </div>
+                <div class="info">
+                  <a href="#" class="title">原创榜</a>
+                  <div class="operation">
+                    <a href="#" class="btn play"></a>
+                    <a href="#" class="btn favor"></a>
+                  </div>
+                </div>
+              </dt>
+              <dd class="list up-list">
+                <ol>
+                  <li class="item">
+                    <span class="no">1</span>
+                    <a href="#" class="song">Ski</a>
+                    <div class="oper">
+                      <a class="btn play" href="#" title="播放"></a>
+                      <a class="btn add" href="#" title="添加到播放列表"></a>
+                      <a class="btn favor" href="#" title="收藏"></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">2</span>
+                    <a href="#" class="song">Slow</a>
+                    <div class="oper">
+                      <a class="btn play" href="#" title="播放"></a>
+                      <a class="btn add" href="#" title="添加到播放列表"></a>
+                      <a class="btn favor" href="#" title="收藏"></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">3</span>
+                    <a href="#" class="song">身骑白马</a>
+                    <div class="oper">
+                      <a class="btn play" href="#" title="播放"></a>
+                      <a class="btn add" href="#" title="添加到播放列表"></a>
+                      <a class="btn favor" href="#" title="收藏"></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">4</span>
+                    <a href="#" class="song">I'll Do It</a>
+                    <div class="oper">
+                      <a class="btn play" href="#" title="播放"></a>
+                      <a class="btn add" href="#" title="添加到播放列表"></a>
+                      <a class="btn favor" href="#" title="收藏"></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">5</span>
+                    <a href="#" class="song">雨过天不晴</a>
+                    <div class="oper">
+                      <a class="btn play" href="#" title="播放"></a>
+                      <a class="btn add" href="#" title="添加到播放列表"></a>
+                      <a class="btn favor" href="#" title="收藏"></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">6</span>
+                    <a href="#" class="song">孤雏</a>
+                    <div class="oper">
+                      <a class="btn play" href="#" title="播放"></a>
+                      <a class="btn add" href="#" title="添加到播放列表"></a>
+                      <a class="btn favor" href="#" title="收藏"></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">7</span>
+                    <a href="#" class="song">Kurup Bakamsan</a>
+                    <div class="oper">
+                      <a class="btn play" href="#" title="播放"></a>
+                      <a class="btn add" href="#" title="添加到播放列表"></a>
+                      <a class="btn favor" href="#" title="收藏"></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">8</span>
+                    <a href="#" class="song">Suygu</a>
+                    <div class="oper">
+                      <a class="btn play" href="#" title="播放"></a>
+                      <a class="btn add" href="#" title="添加到播放列表"></a>
+                      <a class="btn favor" href="#" title="收藏"></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">9</span>
+                    <a href="#" class="song">春读</a>
+                    <div class="oper">
+                      <a class="btn play" href="#" title="播放"></a>
+                      <a class="btn add" href="#" title="添加到播放列表"></a>
+                      <a class="btn favor" href="#" title="收藏"></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">10</span>
+                    <a href="#" class="song">几人</a>
+                    <div class="oper">
+                      <a class="btn play" href="#" title="播放"></a>
+                      <a class="btn add" href="#" title="添加到播放列表"></a>
+                      <a class="btn favor" href="#" title="收藏"></a>
+                    </div>
+                  </li>
+                </ol>
+                <div class="more">
+                  <a href="#" class="all">查看全部 &gt;</a>
+                </div>
+              </dd>
+            </dl>
           </div>
         </div>
       </div>
