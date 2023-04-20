@@ -18,6 +18,65 @@
         margin: 0 auto;
       }
       /* rank-section-content--- */
+      .rank-content{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        height: 472px;
+        padding-left: 1px;
+        background: url(./images/index_bill.png) no-repeat;
+      }
+      .rank-content .rank{
+        width: 230px;
+      }
+      .rank-content .rank .top{
+        display: flex;
+        height: 100px;
+        padding: 20px 0 0 19px;
+      }
+      .rank-content .rank .top .album{
+        position: relative;
+        width: 80px;
+        height: 80px;
+
+      }
+      .rank-content .rank .top .album img{
+        width: 100%;
+        height: 100%;
+      }
+      .rank-content .rank .top .album .cover{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url(./images/coverall.png) no-repeat -145px -57px;
+      }
+      .rank-content .rank .top .info{
+        margin: 6px 0 0 10px;
+      }
+      .rank-content .rank .top .info .title{
+        font-weight: 700;
+        font-size: 14px;
+        color: #333;
+      }
+      .rank-content .rank .top .info .btn{
+        display: inline-block;
+        width: 22px;
+        height: 22px;
+        background: url(./images/user-login-bgc.png) no-repeat;
+        text-indent: -9999px;
+      }
+      .rank-content .rank .top .info .operation{
+        margin-top: 10px;
+      }
+      .rank-content .rank .top .info .play{
+        background-position: -267px -205px;
+      }
+      .rank-content .rank .top .info .favor{
+        margin-left: 10px;
+        background-position: -300px -205px;
+      }
     </style>
   </head>
   <body>
@@ -26,7 +85,26 @@
         <div class="rank-section">
           <div class="header_type_02 music-top"></div>
           <!-- rank-section-content -->
-          
+          <div class="rank-content">
+            <dl class="rank up-rank" >
+              <dt class="top">
+                <div class="album">
+                  <img src="./images/up-img.jpg" alt="飙升榜">
+                  <a href="#" class="cover"></a>
+                </div>
+                <div class="info">
+                  <a href="#" class="title">飙升榜</a>
+                  <div class="operation">
+                    <a href="#" class="btn play"></a>
+                    <a href="#" class="btn favor"></a>
+                  </div>
+                </div>
+              </dt>
+              <dd></dd>
+            </dl>
+            <dl class="rank new-rank"></dl>
+            <dl class="rank origin-rank"></dl>
+          </div>
           
         </div>
       </div>
