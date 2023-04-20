@@ -1,0 +1,138 @@
+/* rank-section-content--- */
+.rank-content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  height: 472px;
+  padding-left: 1px;
+  background: url(../images/index_bill.png) no-repeat;
+}
+.rank-content .rank {
+  width: 230px;
+}
+.rank-content .rank .top {
+  display: flex;
+  height: 100px;
+  padding: 20px 0 0 19px;
+}
+.rank-content .rank .top .album {
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.rank-content .rank .top .album img {
+  width: 100%;
+  height: 100%;
+}
+.rank-content .rank .top .album .cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url(../images/coverall.png) no-repeat -145px -57px;
+}
+.rank-content .rank .top .info {
+  margin: 6px 0 0 10px;
+}
+.rank-content .rank .top .info .title {
+  font-weight: 700;
+  font-size: 14px;
+  color: #333;
+}
+.rank-content .rank .top .info .title:hover {
+  text-decoration: underline;
+}
+.rank-content .rank .top .info .btn {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background: url(../images/user-login-bgc.png) no-repeat;
+  text-indent: -9999px;
+}
+.rank-content .rank .top .info .operation {
+  margin-top: 10px;
+}
+.rank-content .rank .top .info .play {
+  background-position: -267px -205px;
+}
+.rank-content .rank .top .info .play:hover {
+  background-position: -267px -235px;
+}
+.rank-content .rank .top .info .favor {
+  margin-left: 10px;
+  background-position: -300px -205px;
+}
+.rank-content .rank .list {
+  padding-left: 15px;
+}
+.rank-content .rank .list .item {
+  display: flex;
+  justify-content: space-between;
+  height: 32px;
+  line-height: 32px;
+  overflow: hidden;
+}
+.rank-content .rank .list .item .no {
+  width: 35px;
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+}
+.rank-content .rank .list .item:nth-child(-n + 3) .no {
+  color: #c10d0c;
+}
+.rank-content .rank .list .item .song {
+  flex: 1;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.rank-content .rank .list .item .song:hover {
+  text-decoration: underline;
+}
+.rank-content .rank .list .item .oper {
+  display: none;
+  align-items: center;
+  width: 82px;
+}
+.rank-content .rank .list .item:hover .oper {
+  display: flex;
+}
+.rank-content .rank .list .item .oper .btn {
+  width: 17px;
+  height: 17px;
+  background: url(../images/user-login-bgc.png) no-repeat;
+}
+.rank-content .rank .list .item .oper .play {
+  background-position: -267px -268px;
+}
+.rank-content .rank .list .item .oper .play:hover {
+  background-position: -267px -288px;
+}
+.rank-content .rank .list .item .oper .add {
+  margin: 2px 6px 0 10px;
+  background: url(../images/icon.png) no-repeat;
+  background-position: 0 -700px;
+}
+.rank-content .rank .list .item .oper .add:hover {
+  background-position: -22px -700px;
+}
+.rank-content .rank .list .item .oper .favor {
+  background-position: -297px -268px;
+}
+.rank-content .rank .list .item .oper .favor:hover {
+  background-position: -297px -288px;
+}
+.rank-content .rank .list .more {
+  margin-right: 32px;
+  height: 32px;
+  line-height: 32px;
+  text-align: right;
+}
+.rank-content .rank .list .more .all {
+  color: #000;
+}
+.rank-content .rank .list .more .all:hover {
+  text-decoration: underline;
+}
