@@ -16,21 +16,25 @@
       }
       /* disc-section */
       .area-left .disc-content {
-        position: relative;
         height: 186px;
         margin: 20px 0 37px;
         border: 1px solid #d3d3d3;
       }
       .area-left .disc-content .inner {
+        position: relative;
+
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        height: 184px;
-        padding: 0 4px;
+        box-sizing: border-box;
+        height: 100%;
+        padding: 0 20px;
         background: #f5f5f5;
         border: 1px solid #fff;
       }
       .area-left .disc-content .inner .left-btn {
+        position: absolute;
+        top: 70px;
+        left: 0;
         width: 17px;
         height: 17px;
         background: url(./images/user-login-bgc.png) no-repeat -260px -75px;
@@ -38,14 +42,14 @@
       .area-left .disc-content .inner .roll {
         flex: 1;
         display: flex;
-        align-items: center;
-        margin: 0 4px;
-        padding-top: 5px;
         width: 636px;
-        height: 180px;
+        height: 100%;
         overflow: hidden;
       }
       .area-left .disc-content .inner .right-btn {
+        position: absolute;
+        top: 70px;
+        right: 0;
         width: 17px;
         height: 17px;
         background: url(./images/user-login-bgc.png) no-repeat -300px -75px;
@@ -54,9 +58,17 @@
         display: flex;
         width: 100%;
         justify-content: space-between;
+        align-items: center;
         flex-shrink: 0;
+        padding-top: 15px;
       }
-      .area-left .disc-content .inner .new-list > li>div {
+      .area-left .disc-content .inner .new-list .item {
+        width: 118px;
+        height: 150px;
+        background: url(./images/user-login-bgc.png) no-repeat -260px 100px;
+        background-color: #0f0;
+      }
+      .area-left .disc-content .inner .new-list .item .album {
         position: relative;
       }
       .area-left .disc-content .inner .new-list .msk {
@@ -72,7 +84,7 @@
         display: none;
         position: absolute;
         right: 10px;
-        bottom: 5px;
+        bottom: 8px;
         left: 72px;
         width: 22px;
         height: 22px;
@@ -83,8 +95,14 @@
       .area-left .disc-content .inner .new-list .play:hover {
         display: inline;
       }
-      .area-left .disc-content .inner .new-list .f-thide{
+      .area-left .disc-content .inner .new-list .f-thide {
         line-height: 18px;
+      }
+      .area-left .disc-content .inner .new-list .desc {
+        color: #000;
+      }
+      .area-left .disc-content .inner .new-list .author {
+        color: #666;
       }
     </style>
   </head>
@@ -104,32 +122,102 @@
             <a href="#" class="left-btn"></a>
             <div class="roll">
               <ul class="new-list">
-                <li>
-                  <div>
+                <li class="item">
+                  <div class="album">
                     <img src="./images/new-disc-0.jpg" alt="" />
                     <a href="#" class="msk"></a>
                     <a href="#" class="play"></a>
                   </div>
-                  <p class="f-thide"><a href="#" >last aurorally</a></p>
-                  <p class="f-thide"><a href="#">凛として時雨</a></p>
+                  <p class="f-thide"><a href="#" class="desc">last aurorally</a></p>
+                  <p class="f-thide"><a href="#" class="author">凛として時雨</a></p>
                 </li>
-                <li>
-                  <img src="./images/new-disc-0.jpg" alt="" />
-                  <a href="#"></a>
+                <li class="item">
+                  <div class="album">
+                    <img src="./images/new-disc-0.jpg" alt="" />
+                    <a href="#" class="msk"></a>
+                    <a href="#" class="play"></a>
+                  </div>
+                  <p class="f-thide"><a href="#" class="desc">last aurorally</a></p>
+                  <p class="f-thide"><a href="#" class="author">凛として時雨</a></p>
                 </li>
-                <li>
-                  <img src="./images/new-disc-0.jpg" alt="" />
-                  <a href="#"></a>
+                <li class="item">
+                  <div class="album">
+                    <img src="./images/new-disc-0.jpg" alt="" />
+                    <a href="#" class="msk"></a>
+                    <a href="#" class="play"></a>
+                  </div>
+                  <p class="f-thide"><a href="#" class="desc">last aurorally</a></p>
+                  <p class="f-thide"><a href="#" class="author">凛として時雨</a></p>
                 </li>
-                <li>
-                  <img src="./images/new-disc-0.jpg" alt="" />
-                  <a href="#"></a>
+                <li class="item">
+                  <div class="album">
+                    <img src="./images/new-disc-0.jpg" alt="" />
+                    <a href="#" class="msk"></a>
+                    <a href="#" class="play"></a>
+                  </div>
+                  <p class="f-thide"><a href="#" class="desc">last aurorally</a></p>
+                  <p class="f-thide"><a href="#" class="author">凛として時雨</a></p>
                 </li>
-                <li>
-                  <img src="./images/new-disc-0.jpg" alt="" />
-                  <a href="#"></a>
+                <li class="item">
+                  <div class="album">
+                    <img src="./images/new-disc-0.jpg" alt="" />
+                    <a href="#" class="msk"></a>
+                    <a href="#" class="play"></a>
+                  </div>
+                  <p class="f-thide"><a href="#" class="desc">last aurorally</a></p>
+                  <p class="f-thide"><a href="#" class="author">凛として時雨</a></p>
                 </li>
+               
               </ul>
+              <ul class="new-list">
+                <li class="item">
+                  <div class="album">
+                    <img src="./images/new-disc-0.jpg" alt="" />
+                    <a href="#" class="msk"></a>
+                    <a href="#" class="play"></a>
+                  </div>
+                  <p class="f-thide"><a href="#" class="desc">last aurorally</a></p>
+                  <p class="f-thide"><a href="#" class="author">凛として時雨</a></p>
+                </li>
+                <li class="item">
+                  <div class="album">
+                    <img src="./images/new-disc-0.jpg" alt="" />
+                    <a href="#" class="msk"></a>
+                    <a href="#" class="play"></a>
+                  </div>
+                  <p class="f-thide"><a href="#" class="desc">last aurorally</a></p>
+                  <p class="f-thide"><a href="#" class="author">凛として時雨</a></p>
+                </li>
+                <li class="item">
+                  <div class="album">
+                    <img src="./images/new-disc-0.jpg" alt="" />
+                    <a href="#" class="msk"></a>
+                    <a href="#" class="play"></a>
+                  </div>
+                  <p class="f-thide"><a href="#" class="desc">last aurorally</a></p>
+                  <p class="f-thide"><a href="#" class="author">凛として時雨</a></p>
+                </li>
+                <li class="item">
+                  <div class="album">
+                    <img src="./images/new-disc-0.jpg" alt="" />
+                    <a href="#" class="msk"></a>
+                    <a href="#" class="play"></a>
+                  </div>
+                  <p class="f-thide"><a href="#" class="desc">last aurorally</a></p>
+                  <p class="f-thide"><a href="#" class="author">凛として時雨</a></p>
+                </li>
+                <li class="item">
+                  <div class="album">
+                    <img src="./images/new-disc-0.jpg" alt="" />
+                    <a href="#" class="msk"></a>
+                    <a href="#" class="play"></a>
+                  </div>
+                  <p class="f-thide"><a href="#" class="desc">last aurorally</a></p>
+                  <p class="f-thide"><a href="#" class="author">凛として時雨</a></p>
+                </li>
+               
+              </ul>
+              
             </div>
             <a href="" class="right-btn"></a>
           </div>
