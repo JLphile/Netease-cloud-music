@@ -7,15 +7,17 @@
     <title>网易云-main</title>
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/common.css" />
-    <link rel="stylesheet" href="./css/top.css">
+    <link rel="stylesheet" href="./css/top.css" />
+    <link rel="stylesheet" href="./css/swipe.css" />
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/area-right.css" />
-    <link rel="stylesheet" href="./css/hot-content.css">
-    <link rel="stylesheet" href="./css/new-disc.css">
-    <link rel="stylesheet" href="./css/rank-content.css">
-    <link rel="stylesheet" href="./css/hot-anchor.css">
+    <link rel="stylesheet" href="./css/hot-content.css" />
+    <link rel="stylesheet" href="./css/new-disc.css" />
+    <link rel="stylesheet" href="./css/rank-content.css" />
+    <link rel="stylesheet" href="./css/hot-anchor.css" />
     <style>
-      .top {
+     
+      /* .top {
         height: 105px;
         background-color: #ccc;
       }
@@ -24,7 +26,7 @@
         background-image: url(./images/swiper-bgc-1.jpg);
         background-size: 6000px;
         background-position: center center;
-      }
+      } */
       /* -----------main------------- */
       .main .area {
         display: flex;
@@ -39,7 +41,7 @@
         padding: 20px 20px 40px;
       }
 
-      .footer{
+      .footer {
         height: 325px;
         border-top: 1px solid #d3d3d3;
         background: #f2f2f2;
@@ -103,7 +105,75 @@
         </ul>
       </nav>
     </div>
-    <div class="swipe"></div>
+    <div class="swipe">
+      <div class="area swipe_w982">
+        <div class="area-left">
+          <ul class="img-list">
+            <li>
+              <a href="#" class="item">
+                <img src="./images/swiper-0.jpg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="#" class="item">
+                <img src="./images/swiper-1.jpg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="#" class="item">
+                <img src="./images/swiper-2.jpg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="#" class="item">
+                <img src="./images/swiper-3.jpg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="#" class="item">
+                <img src="./images/swiper-4.jpg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="#" class="item">
+                <img src="./images/swiper-5.jpg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="#" class="item">
+                <img src="./images/swiper-6.jpg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="#" class="item">
+                <img src="./images/swiper-7.jpg" alt="" />
+              </a>
+            </li>
+          </ul>
+
+          <div class="dots">
+            <a href="#" class="dot active"></a>
+            <a href="#" class="dot"></a>
+            <a href="#" class="dot"></a>
+            <a href="#" class="dot"></a>
+            <a href="#" class="dot"></a>
+            <a href="#" class="dot"></a>
+            <a href="#" class="dot"></a>
+            <a href="#" class="dot"></a>
+          </div>
+        </div>
+
+        <div class="area-right">
+          <a href="#" class="download">下载客户端</a>
+          <p>PC 安卓 iPhone WP iPad Mac 六大客户端</p>
+          <span class="shadow-left"></span>
+          <span class="shadow-right"></span>
+        </div>
+
+        <a href="javascript:void(0)" class="control-left"></a>
+        <a href="javascript:void(0)" class="control-right"></a>
+      </div>
+    </div>
     <!-- -----main------ -->
     <div class="main">
       <div class="area _w980">
@@ -726,7 +796,6 @@
                 </dd>
               </dl>
             </div>
-            
           </div>
         </div>
         <div class="area-right">
@@ -860,6 +929,7 @@
     </div>
 
     <div class="footer"></div>
-    <script></script>
+    <script src="./js/header.js"></script>
+    <script src="./js/swipe.js"></script>
   </body>
 </html>

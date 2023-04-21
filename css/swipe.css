@@ -1,0 +1,122 @@
+.swipe {
+  height: 285px;
+  background-image: url(../images/swiper-bgc-1.jpg);
+  background-size: 6000px;
+  background-position: center center;
+}
+.swipe .area {
+  position: relative;
+  height: 285px;
+}
+/* ------area-left-image---- */
+.swipe .area-left {
+  position: relative;
+  width: 730px;
+  overflow: hidden;
+}
+.swipe .area-left .img-list {
+  display: flex;
+}
+.swipe .area-left .img-list li {
+  flex-shrink: 0;
+  width: 100%;
+}
+.swipe .area-left .img-list .item {
+  display: block;
+}
+.swipe .area-left .img-list .item img {
+  display: block;
+  width: 100%;
+  height: 285px;
+}
+/* -------banner-dots--------- */
+.swipe .area-left .dots {
+  position: absolute;
+  top: 259px;
+  left: 0;
+  width: 730px;
+  height: 20px;
+  text-align: center;
+}
+.swipe .area-left .dots .dot {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url(../images/banner.png) no-repeat 3px -343px;
+}
+.swipe .area-left .dots .dot.active,
+.swipe .area-left .dots .dot:hover {
+  background-position: -16px -343px;
+}
+/* -----area-right-download--------- */
+.swipe .area-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -1px;
+  width: 254px;
+  height: 285px;
+  background: url(../images/area-right-download.png) no-repeat 0 0;
+}
+.swipe .area-right .download {
+  color: red;
+  display: block;
+  width: 215px;
+  height: 56px;
+  margin: 186px 0 0 19px;
+  text-indent: -9999px;
+}
+.swipe .area-right .download:hover {
+  background: url(../images/area-right-download.png) no-repeat 0 -290px;
+}
+
+.swipe .area-right p {
+  margin: 10px auto;
+  text-align: center;
+  color: #8d8d8d;
+}
+.swipe .area-right .shadow-left,
+.swipe .area-right .shadow-right {
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 20px;
+  height: 285px;
+  background: url(../images/banner.png) no-repeat;
+}
+.swipe .area-right .shadow-left {
+  left: -20px;
+  background-position: -1px 0;
+}
+
+.swipe .area-right .shadow-right {
+  right: -20px;
+  background-position: -20px 0;
+}
+
+/* --------control-tab--------- */
+.swipe .area .control-left,
+.swipe .area .control-right {
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  width: 37px;
+  height: 63px;
+  background: url(../images/banner.png) no-repeat;
+}
+.swipe .area .control-left {
+  left: -68px;
+  background-position: 0 -360px;
+}
+.swipe .area .control-left:hover {
+  background-position: 0 -430px;
+}
+.swipe .area .control-right {
+  right: -68px;
+  background-position: 0 -508px;
+}
+.swipe .area .control-right:hover {
+  background-position: 0 -578px;
+}
